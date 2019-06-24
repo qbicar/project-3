@@ -3,6 +3,7 @@ $('#other-title').hide()
 
 //Job role Section$
 
+
 $('#title').on('change',function() {                    //id of title 
     if ($(this).val()=== 'other') {
         $('#other-title').show();
@@ -10,9 +11,15 @@ $('#title').on('change',function() {                    //id of title
         $('#other-title').hide();
     }
 });
+//document.getElementById('mail').placeholder = "Please Insert Email";
 
-//T-shirt Section
-$('#color').placeholder ="Please select a T-shirt theme";
-/***$('#color').on('change', function (e){
+//T-shirt section
+$('#colors-js-puns').hide();
 
-});*/
+$('#design').on('change', function(){
+    if ($(this).val() ==="") {
+    $('#colors-js-puns').hide();
+}else {
+    $('#colors-js-puns').show();
+    }
+});
