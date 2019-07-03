@@ -228,9 +228,9 @@ $(this).val()=== 'bitcoin') {                                   // if bitcoin te
 });
  
 $('form').submit(function(e){                                           //submit eventlistener for form
-    if (check_name() == true && check_mail() == true                    // if all check functions are true (not correct to regex) 
-        && check_activities() == true && check_credit()                 //
-        == true && check_zip() == true && check_cvv() == true){
+    if (check_name() === true ||  check_mail() === true                    // if all check functions are true (not correct to regex) 
+        && check_activities() === true || check_credit()                 //
+        === true || check_zip() === true || check_cvv() === true){
           alert ("Please fill form correctly") ;                        //alert box will display to tell user to fill out the form and the red fields correctly
            e.preventDefault();                                          // preventDefault prevents the form from submitting
             return false;                                               
